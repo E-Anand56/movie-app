@@ -7,7 +7,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from fuzzywuzzy import process
 
 # Load dataset
-df = pd.read_excel('medmovies.xlsx')
+df = pd.read_excel('movie_data_with_year.xlsx')
 df.fillna('', inplace=True)
 df = df[df['Title'] != '']
 df['combined_features'] = df['Top 3 Genres'] + ' ' + df['Top 5 Cast'] + ' ' + df['Title']
